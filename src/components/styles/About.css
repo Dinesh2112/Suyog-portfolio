@@ -19,13 +19,13 @@
   font-size: 25px;
   text-transform: uppercase;
   letter-spacing: 7px;
-  font-weight: 400;
+  font-weight: bold;
   color: var(--accentColor);
 }
 
 .about-me p {
   font-size: 33px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 36px;
   letter-spacing: 1px;
 }

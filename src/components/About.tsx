@@ -6,9 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          I am a motivated and enthusiastic individual with a strong ability to learn quickly and adapt to new environments. I have excellent problem-solving skills, strong attention to detail, and the ability to work well in teams. I am eager to take on challenges, contribute positively, and grow within a professional setting.
         </p>
       </div>
     </div>

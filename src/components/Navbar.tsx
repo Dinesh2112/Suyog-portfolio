@@ -6,6 +6,10 @@ import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+gsap.config({
+  // @ts-ignore
+  trialWarn: false,
+});
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
@@ -43,14 +47,14 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+          <img src="/images/suyog_logo.png" alt="Suyog Logo" style={{ height: '40px', objectFit: 'contain' }} />
         </a>
         <a
-          href="mailto:example@mail.com"
+          href="mailto:psuyog0331@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          example@mail.com
+          psuyog0331@gmail.com
         </a>
         <ul>
           <li>

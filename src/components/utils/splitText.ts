@@ -20,6 +20,7 @@ export default function setSplitText() {
   const ToggleAction = "play pause resume reverse";
 
   paras.forEach((para: ParaElement) => {
+    if (!para) return;
     para.classList.add("visible");
     if (para.anim) {
       para.anim.progress(1).kill();
@@ -31,6 +32,7 @@ export default function setSplitText() {
       linesClass: "split-line",
     });
 
+    if (!para.split) return;
     para.anim = gsap.fromTo(
       para.split.words,
       { autoAlpha: 0, y: 80 },
@@ -49,6 +51,7 @@ export default function setSplitText() {
     );
   });
   titles.forEach((title: ParaElement) => {
+    if (!title) return;
     if (title.anim) {
       title.anim.progress(1).kill();
       title.split?.revert();
@@ -57,6 +60,7 @@ export default function setSplitText() {
       type: "chars,lines",
       linesClass: "split-line",
     });
+    if (!title.split) return;
     title.anim = gsap.fromTo(
       title.split.chars,
       { autoAlpha: 0, y: 80, rotate: 10 },
