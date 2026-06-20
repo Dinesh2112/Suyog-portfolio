@@ -87,7 +87,7 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>SOCIAL MEDIA</h3>
+              <h3>SOCIAL MEDIA MANAGER</h3>
               <h4>Description</h4>
               <p>
                 Handling social media presence for 5-8 companies, planning, scheduling, and publishing posts across platforms using Meta Business Suite to boost engagement.

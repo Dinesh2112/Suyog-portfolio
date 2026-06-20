@@ -81,23 +81,24 @@ export function initialFX() {
   Loop3Text(landingText2, landingText3, landingText6);
   Loop3Text(landingText4, landingText5, landingText7);
 }
-
 function Loop3Text(Text1: SplitText, Text2: SplitText, Text3: SplitText) {
-  var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-  const delay = 4;
+  var tl = gsap.timeline({ repeat: -1 });
+  const wait = 3;
+  const trans = 1.2;
 
   tl.set(Text2.chars, { y: 80, opacity: 0 })
-    .set(Text3.chars, { y: 80, opacity: 0 })
+    .set(Text3.chars, { y: 80, opacity: 0 });
     
-    // T1 out, T2 in
-    .to(Text1.chars, { y: -80, duration: 1.2, ease: "power3.inOut", stagger: 0.1, delay: delay }, 0)
-    .to(Text2.chars, { y: 0, opacity: 1, duration: 1.2, ease: "power3.inOut", stagger: 0.1, delay: delay }, 0)
+  // T1 to T2
+  tl.to(Text1.chars, { y: -80, duration: trans, ease: "power3.inOut", stagger: 0.05 }, `+=${wait}`)
+    .to(Text2.chars, { y: 0, opacity: 1, duration: trans, ease: "power3.inOut", stagger: 0.05 }, `<`);
     
-    // T2 out, T3 in
-    .to(Text2.chars, { y: -80, duration: 1.2, ease: "power3.inOut", stagger: 0.1, delay: delay }, 1)
-    .to(Text3.chars, { y: 0, opacity: 1, duration: 1.2, ease: "power3.inOut", stagger: 0.1, delay: delay }, 1)
+  // T2 to T3
+  tl.to(Text2.chars, { y: -80, duration: trans, ease: "power3.inOut", stagger: 0.05 }, `+=${wait}`)
+    .to(Text3.chars, { y: 0, opacity: 1, duration: trans, ease: "power3.inOut", stagger: 0.05 }, `<`);
     
-    // T3 out, T1 in
-    .to(Text3.chars, { y: -80, duration: 1.2, ease: "power3.inOut", stagger: 0.1, delay: delay }, 2)
-    .fromTo(Text1.chars, { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "power3.inOut", stagger: 0.1, delay: delay }, 2);
+  // T3 to T1
+  tl.to(Text3.chars, { y: -80, duration: trans, ease: "power3.inOut", stagger: 0.05 }, `+=${wait}`)
+    .set(Text1.chars, { y: 80, opacity: 0 }, `<`)
+    .to(Text1.chars, { y: 0, opacity: 1, duration: trans, ease: "power3.inOut", stagger: 0.05 }, `<`);
 }
