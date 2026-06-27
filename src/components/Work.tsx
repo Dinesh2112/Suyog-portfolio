@@ -36,11 +36,11 @@ const Work = () => {
       image: "/images/benfarm_fresh.png"
     },
     {
-      title: "NS Kid Suyog",
-      category: "Video Editing & Content",
-      tools: "Premiere Pro, After Effects, CapCut",
-      link: "https://www.instagram.com/ns_kid_suyog/",
-      image: "/images/ns_kid_suyog.png"
+      title: "Podcast Production",
+      category: "Shooting & Video Editing",
+      tools: "Premiere Pro, After Effects",
+      link: "https://youtu.be/t2bWlqC8i9M?si=VBEbTIvABCs8ZXCj",
+      image: "/images/podcast_studio.png"
     },
     {
       title: "Fund My Case",
