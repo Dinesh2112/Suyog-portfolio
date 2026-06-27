@@ -43,7 +43,7 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          <img src="/images/suyog_logo.png" alt="Suyog Logo" style={{ height: '40px', objectFit: 'contain' }} />
+          <img src="/images/suyog_logo.png" alt="Suyog Logo" style={{ height: '120px', objectFit: 'contain', marginTop: '-40px', marginBottom: '-40px' }} />
         </a>
         <a
           href="mailto:psuyog0331@gmail.com"
